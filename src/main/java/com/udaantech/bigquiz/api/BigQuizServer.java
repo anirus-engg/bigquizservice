@@ -8,9 +8,9 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication
 @ComponentScan(basePackages = "com.udaantech.bigquiz")
 @EnableMongoRepositories(basePackages = "com.udaantech.bigquiz")
-public class BiQuizServer {
+public class BigQuizServer {
 
   public static void main(String[] args) {
-    SpringApplication.run(BiQuizServer.class, args);
+    SpringApplication.run(BigQuizServer.class, args);
   }
 }

@@ -1,5 +1,6 @@
 package com.udaantech.bigquiz.service;
 
+import com.udaantech.bigquiz.model.MetaData;
 import com.udaantech.bigquiz.model.Question;
 import com.udaantech.bigquiz.model.QuestionRepository;
 import java.util.List;
@@ -37,5 +38,11 @@ public class BigQuizService {
 
   public List<Question> saveQuestions(List<Question> questions) {
     return questionRepository.saveAll(questions);
+  }
+
+  public MetaData getMetaData() {
+    MetaData metaData = new MetaData();
+    metaData.setTotalQuestions(questionRepository.count());
+    return metaData;
   }
 }

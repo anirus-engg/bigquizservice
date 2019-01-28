@@ -1,5 +1,6 @@
 package com.udaantech.bigquiz.api;
 
+import com.udaantech.bigquiz.model.MetaData;
 import com.udaantech.bigquiz.model.Question;
 import com.udaantech.bigquiz.service.BigQuizService;
 import java.util.List;
@@ -30,5 +31,10 @@ public class BigQuizController {
   @PostMapping(value = "questions")
   public List<Question> saveQuestions(@RequestBody List<Question> questions) {
     return bigQuizService.saveQuestions(questions);
+  }
+
+  @GetMapping(value = "metadata")
+  public MetaData getMetaData() {
+    return bigQuizService.getMetaData();
   }
 }
